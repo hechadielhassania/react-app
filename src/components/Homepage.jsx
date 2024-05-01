@@ -1,14 +1,14 @@
 import React from 'react'
 import Header from "./Header";
 import SearchBar from "./searchbar";
-import ImployeeList from './EmployeeList'
+import EmployeeList from './EmployeeList'
 
-function Homepage({title}) {
+function Homepage({title, workers}) {
   return (
     <div className="homepage">
       <Header topic={title} />
       <SearchBar />
-      <ImployeeList />
+      <EmployeeList staff={workers} />
     </div>
   )
 }

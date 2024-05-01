@@ -1,16 +1,26 @@
-import React from 'react'
+// EmpItem.js
+import React from 'react';
 import myImage from './img/vp.png';
 
-function EmpItem() {
+function EmpItem({ info }) {
+  console.log('Info:', info); // Log info object to verify its structure
+
+  if (!info) {
+    return <div>No data available</div>; // Fallback message if info is undefined
+  }
+
+  // Destructure properties from info object
+  const { name, position } = info;
+
   return (
     <div className='emp_item'>
-        <div className='img_Emp'><img src={myImage} /></div>
-        <div className='name_Emp'>
-          <h1>James King</h1>
-          <h5>President and CEO</h5>
-        </div>
+      <div className='img_Emp'><img src={myImage} alt="Employee" /></div>
+      <div className='name_Emp'>
+        <h1>{name}</h1>
+        <h5>{position}</h5>
+      </div>
     </div>
-  )
+  );
 }
 
-export default EmpItem
+export default EmpItem;

@@ -1,13 +1,15 @@
-import { useRef } from "react";
-import React from 'react'
-import EmployeeListItem from './EmployeeListItem'
+// EmployeeList.js
+import React from 'react';
+import EmpItem from "./EmpItem";
 
-function EmployeeList() {
+function EmployeeList({ staff }) {
   return (
     <div className="employeeList">
-      <EmployeeListItem />
+      {staff.map((worker, i) => (
+        <EmpItem key={i} info={worker} />
+      ))}
     </div>
-  )
+  );
 }
 
-export default EmployeeList
+export default EmployeeList;

@@ -35,7 +35,7 @@
   border: solid purple;
   margin: 3px;
 }
-.employeeListItem{
+.employeeList .emp_item{
   border: solid palevioletred;
   margin: 3px;
 }
