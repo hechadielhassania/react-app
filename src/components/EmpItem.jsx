@@ -1,6 +1,6 @@
 // EmpItem.js
 import React from 'react';
-import myImage from './img/vp.png';
+
 
 function EmpItem({ info }) {
   console.log('Info:', info); // Log info object to verify its structure
@@ -10,11 +10,11 @@ function EmpItem({ info }) {
   }
 
   // Destructure properties from info object
-  const { name, position } = info;
+  const { name, position, image } = info;
 
   return (
     <div className='emp_item'>
-      <div className='img_Emp'><img src={myImage} alt="Employee" /></div>
+      <div className='img_Emp'><img src={image} alt="Employee" /></div>
       <div className='name_Emp'>
         <h1>{name}</h1>
         <h5>{position}</h5>

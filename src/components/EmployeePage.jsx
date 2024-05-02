@@ -2,13 +2,14 @@ import React from 'react'
 import Header from "./Header"
 import EmpItem from './EmpItem'
 import EmpInfo  from './EmpInfo'
+import { allEmployees } from '../App'
 
-function EmployeePage({title}) {
+
+function EmployeePage() {
   return (
     <div className='emp_page'>
-      <Header topic={title}/>
       <div className='emp_Infos'>
-        <EmpItem />
+        <EmpItem info={allEmployees[0]} />
         <EmpInfo />
       </div>
     </div>
